@@ -154,12 +154,12 @@ const Places: React.FC<{ data: PlacesQuery }> = ({ data }) => {
             max-width: 320px;
           `}
         >
-          <FacebookShareButton url={url} hashtag="#釧路お持ち帰りごはん">
+          <FacebookShareButton url={url} hashtag="#旭川お持ち帰りごはん">
             <FacebookIcon round={true} size={32} />
           </FacebookShareButton>
           <TwitterShareButton
             url={url}
-            hashtags={["釧路お持ち帰りごはん", place.name.replace(/\s+/g, "_")]}
+            hashtags={["旭川お持ち帰りごはん", place.name.replace(/\s+/g, "_")]}
           >
             <TwitterIcon round={true} size={32} />
           </TwitterShareButton>

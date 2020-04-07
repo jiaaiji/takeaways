@@ -89,11 +89,11 @@ const Index: React.FC<{ data: IndexQuery; pageContext: SitePageContext }> = ({
         `}
       >
         <h1 css={borderdTitle}>About</h1>
-        <p>釧路地方でテイクアウトを行っているお店を紹介しています。</p>
+        <p>旭川地方でテイクアウトを行っているお店を紹介しています。</p>
         <p>
           感想や、オススメ情報など{" "}
           <a href="https://twitter.com/search/?q=%23釧路お持ち帰りごはん">
-            #釧路お持ち帰りごはん
+            #旭川お持ち帰りごはん
           </a>{" "}
           をつけて Tweet してみてください！
         </p>
@@ -103,7 +103,7 @@ const Index: React.FC<{ data: IndexQuery; pageContext: SitePageContext }> = ({
           `}
         >
           <TwitterHashtagButton
-            tag="釧路お持ち帰りごはん"
+            tag="旭川お持ち帰りごはん"
             options={{ size: "large" }}
           />
         </div>
