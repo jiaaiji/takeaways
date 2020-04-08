@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    name: `お持ち帰りごはん 釧路版`,
+    name: `お持ち帰りごはん 旭川版`,
     siteUrl: process.env.URL || "",
     title: `プロの味をご家庭で 家事の効率化に、気分転換に、プチ贅沢に`,
-    description: `釧路地方のテイクアウトサービスを実施しているお店を掲載しております`,
-    keywords: [`釧路`, `ごはん`, `グルメ`, `テイクアウト`, `持ち帰り`]
+    description: `旭川地方のテイクアウトサービスを実施しているお店を掲載しております`,
+    keywords: [`旭川`, `ごはん`, `グルメ`, `テイクアウト`, `持ち帰り`]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

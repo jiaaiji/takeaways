@@ -27,7 +27,7 @@ export default () => (
         `}
       >
         <a
-          href="https://forms.gle/UqnWaFTLUZpCEsFg6"
+          href="https://forms.gle/CfW7siNGcY7gQ9yh6"
           target="_blank"
           rel="noopener noreferrer"
         >
