@@ -1,6 +1,10 @@
 import * as React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faTwitter,
+  faFacebook
+} from "@fortawesome/free-brands-svg-icons";
 import { css } from "@emotion/core";
 
 export default () => (
@@ -19,16 +23,7 @@ export default () => (
           font-weight: bold;
         `}
       >
-        釧路市ビジネスサポートセンター k-Biz
-      </p>
-      <p>
-        営業時間：9:00-17:00
-        <br />
-        定休日：日曜・月曜
-        <br />
-        <a href="mailto:info@k-biz.kushiro.jp">info@k-biz.kushiro.jp</a>
-        <br />
-        <a href="tel:0154685624">0154-68-5624</a> ​
+        旭川ひとまちコミュニティ（一般社団法人登記準備中）
       </p>
       <p
         css={css`
@@ -37,11 +32,7 @@ export default () => (
       >
         &bull;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;&nbsp;&bull;
       </p>
-      <p>
-        釧路商工会議所
-        <br />
-        <a href="tel:0154414141">0154-41-4141</a>
-      </p>
+      <p>合同会社 下村総合投資事務所</p>
       <p
         css={css`
           margin: 0.5rem 0;
@@ -49,21 +40,6 @@ export default () => (
       >
         &bull;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;&nbsp;&bull;
       </p>
-      <p>
-        一般社団法人北海道中小企業家同友会くしろ支部
-        <br />
-        <a href="tel:0154310923">0154-31-0923</a>
-      </p>
-      <p>一般社団法人旭川ひとまちコミュニティ（手続き中）</p>
-    </div>
-    <div
-      css={css`
-        font-weight: bold;
-        margin: 0 auto;
-        max-width: 960;
-        padding: 1.45rem 1.0875rem 0.5rem;
-      `}
-    >
       お持ち帰りごはん by 釧路OSSコミュニティ
     </div>
     <div
