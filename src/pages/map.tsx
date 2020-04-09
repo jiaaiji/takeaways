@@ -18,8 +18,8 @@ const ICON = `M20.2,15.7L20.2,15.7c1.1-1.6,1.8-3.6,1.8-5.7c0-5.6-4.5-10-10-10S2,
 
 const Map: React.FC<{ data: MapQuery }> = ({ data }) => {
   const [viewport, setViewport] = useState({
-    latitude: 43,
-    longitude: 144.3838363,
+    latitude: 43.770905,
+    longitude: 142.365154,
     zoom: 12
   });
   const [popup, setPopup] = useState(null);
@@ -42,7 +42,7 @@ const Map: React.FC<{ data: MapQuery }> = ({ data }) => {
           });
         }}
         onViewportChange={setViewport}
-        mapboxApiAccessToken="pk.eyJ1IjoiOTQ2b3NzIiwiYSI6ImNrN2t2dTA4eTAwbjYzbHA4YjdpOGxhbm4ifQ.4BZeulOXSjBeAClmJaM9Ig"
+        mapboxApiAccessToken="pk.eyJ1IjoiamlhYWlqaSIsImEiOiJjazh0aGlvcWEwMGM2M2xwaWtsbzlwNWU3In0.l9-upQ60RuKrMcEjSxjcJQ"
       >
         {data.allContentfulPlace.edges.map(({ node }) => (
           <Marker

@@ -25,13 +25,40 @@ export default () => (
       >
         旭川ひとまちコミュニティ（一般社団法人登記準備中）
       </p>
-      <p
+      <div
         css={css`
-          margin: 0.5rem 0;
+          a {
+            margin-bottom: 2rem;
+            margin-left: 1rem;
+
+            &:first-of-type {
+              margin-left: 0;
+            }
+          }
         `}
       >
-        &bull;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;&nbsp;&bull;
-      </p>
+        <a
+          href="https://github.com/jiaaiji"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faGithub} size="lg" />
+        </a>
+        <a
+          href="https://www.facebook.com/AsahikawaHitoMachiCommunity/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faFacebook} size="lg" />
+        </a>
+        <p
+          css={css`
+            margin: 0.5rem 0;
+          `}
+        >
+          &bull;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;&nbsp;&bull;
+        </p>
+      </div>
       <p>合同会社 下村総合投資事務所</p>
       <p
         css={css`
