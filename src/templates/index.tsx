@@ -6,6 +6,7 @@ import { TwitterHashtagButton } from "react-twitter-embed";
 import SEO from "../components/SEO";
 import Layout from "../components/Layout";
 import PlaceListItem from "../components/PlaceListItem";
+import { FacebookShareButton } from "react-share";
 
 const borderdTitle = css`
   font-size: 0.8rem;
@@ -92,10 +93,10 @@ const Index: React.FC<{ data: IndexQuery; pageContext: SitePageContext }> = ({
         <p>旭川地方でテイクアウトを行っているお店を紹介しています。</p>
         <p>
           感想や、オススメ情報など{" "}
-          <a href="https://twitter.com/search/?q=%23釧路お持ち帰りごはん">
+          <a href="https://twitter.com/search/?q=%23旭川持ち帰りごはん">
             #旭川お持ち帰りごはん
           </a>{" "}
-          をつけて Tweet してみてください！
+          をつけて投稿してみてください！
         </p>
         <div
           css={css`
