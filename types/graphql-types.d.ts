@@ -689,8 +689,6 @@ export type ContentfulPlace = Node & {
   tel?: Maybe<Array<Maybe<Scalars["String"]>>>;
   closed_on?: Maybe<Array<Maybe<Scalars["String"]>>>;
   business_hours?: Maybe<Scalars["String"]>;
-  website?: Maybe<Scalars["String"]>;
-  twitter?: Maybe<Scalars["String"]>;
   facebook?: Maybe<Scalars["String"]>;
   pictures?: Maybe<Array<Maybe<ContentfulAsset>>>;
   menu?: Maybe<Array<Maybe<ContentfulAsset>>>;
@@ -703,6 +701,8 @@ export type ContentfulPlace = Node & {
   updatedAt?: Maybe<Scalars["Date"]>;
   sys?: Maybe<ContentfulPlaceSys>;
   node_locale?: Maybe<Scalars["String"]>;
+  website?: Maybe<Scalars["String"]>;
+  twitter?: Maybe<Scalars["String"]>;
   childContentfulPlaceDescriptionTextNode?: Maybe<
     ContentfulPlaceDescriptionTextNode
   >;
@@ -989,8 +989,6 @@ export type ContentfulPlaceFieldsEnum =
   | "tel"
   | "closed_on"
   | "business_hours"
-  | "website"
-  | "twitter"
   | "facebook"
   | "pictures"
   | "pictures___id"
@@ -1332,8 +1330,6 @@ export type ContentfulPlaceFieldsEnum =
   | "tags___place___tel"
   | "tags___place___closed_on"
   | "tags___place___business_hours"
-  | "tags___place___website"
-  | "tags___place___twitter"
   | "tags___place___facebook"
   | "tags___place___pictures"
   | "tags___place___pictures___id"
@@ -1375,6 +1371,8 @@ export type ContentfulPlaceFieldsEnum =
   | "tags___place___updatedAt"
   | "tags___place___sys___revision"
   | "tags___place___node_locale"
+  | "tags___place___website"
+  | "tags___place___twitter"
   | "tags___place___childContentfulPlaceDescriptionTextNode___id"
   | "tags___place___childContentfulPlaceDescriptionTextNode___children"
   | "tags___place___childContentfulPlaceDescriptionTextNode___description"
@@ -1485,6 +1483,8 @@ export type ContentfulPlaceFieldsEnum =
   | "sys___contentType___sys___id"
   | "sys___contentType___sys___contentful_id"
   | "node_locale"
+  | "website"
+  | "twitter"
   | "childContentfulPlaceDescriptionTextNode___id"
   | "childContentfulPlaceDescriptionTextNode___parent___id"
   | "childContentfulPlaceDescriptionTextNode___parent___parent___id"
@@ -1583,8 +1583,6 @@ export type ContentfulPlaceFilterInput = {
   tel?: Maybe<StringQueryOperatorInput>;
   closed_on?: Maybe<StringQueryOperatorInput>;
   business_hours?: Maybe<StringQueryOperatorInput>;
-  website?: Maybe<StringQueryOperatorInput>;
-  twitter?: Maybe<StringQueryOperatorInput>;
   facebook?: Maybe<StringQueryOperatorInput>;
   pictures?: Maybe<ContentfulAssetFilterListInput>;
   menu?: Maybe<ContentfulAssetFilterListInput>;
@@ -1597,6 +1595,8 @@ export type ContentfulPlaceFilterInput = {
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulPlaceSysFilterInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
+  website?: Maybe<StringQueryOperatorInput>;
+  twitter?: Maybe<StringQueryOperatorInput>;
   childContentfulPlaceDescriptionTextNode?: Maybe<
     ContentfulPlaceDescriptionTextNodeFilterInput
   >;
@@ -2047,8 +2047,6 @@ export type ContentfulPlaceTagFieldsEnum =
   | "place___tel"
   | "place___closed_on"
   | "place___business_hours"
-  | "place___website"
-  | "place___twitter"
   | "place___facebook"
   | "place___pictures"
   | "place___pictures___id"
@@ -2274,8 +2272,6 @@ export type ContentfulPlaceTagFieldsEnum =
   | "place___tags___place___tel"
   | "place___tags___place___closed_on"
   | "place___tags___place___business_hours"
-  | "place___tags___place___website"
-  | "place___tags___place___twitter"
   | "place___tags___place___facebook"
   | "place___tags___place___pictures"
   | "place___tags___place___menu"
@@ -2285,6 +2281,8 @@ export type ContentfulPlaceTagFieldsEnum =
   | "place___tags___place___createdAt"
   | "place___tags___place___updatedAt"
   | "place___tags___place___node_locale"
+  | "place___tags___place___website"
+  | "place___tags___place___twitter"
   | "place___tags___spaceId"
   | "place___tags___contentful_id"
   | "place___tags___createdAt"
@@ -2332,6 +2330,8 @@ export type ContentfulPlaceTagFieldsEnum =
   | "place___updatedAt"
   | "place___sys___revision"
   | "place___node_locale"
+  | "place___website"
+  | "place___twitter"
   | "place___childContentfulPlaceDescriptionTextNode___id"
   | "place___childContentfulPlaceDescriptionTextNode___parent___id"
   | "place___childContentfulPlaceDescriptionTextNode___parent___children"
@@ -3804,8 +3804,6 @@ export type Query = {
   allSite: SiteConnection;
   imageSharp?: Maybe<ImageSharp>;
   allImageSharp: ImageSharpConnection;
-  contentfulAsset?: Maybe<ContentfulAsset>;
-  allContentfulAsset: ContentfulAssetConnection;
   contentfulPlaceTag?: Maybe<ContentfulPlaceTag>;
   allContentfulPlaceTag: ContentfulPlaceTagConnection;
   contentfulPlaceMessageRichTextNode?: Maybe<
@@ -3818,6 +3816,8 @@ export type Query = {
   allContentfulPlaceDescriptionTextNode: ContentfulPlaceDescriptionTextNodeConnection;
   contentfulPlace?: Maybe<ContentfulPlace>;
   allContentfulPlace: ContentfulPlaceConnection;
+  contentfulAsset?: Maybe<ContentfulAsset>;
+  allContentfulAsset: ContentfulAssetConnection;
   contentfulContentType?: Maybe<ContentfulContentType>;
   allContentfulContentType: ContentfulContentTypeConnection;
   siteBuildMetadata?: Maybe<SiteBuildMetadata>;
@@ -3985,31 +3985,6 @@ export type QueryAllImageSharpArgs = {
   limit?: Maybe<Scalars["Int"]>;
 };
 
-export type QueryContentfulAssetArgs = {
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
-  contentful_id?: Maybe<StringQueryOperatorInput>;
-  file?: Maybe<ContentfulAssetFileFilterInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  description?: Maybe<StringQueryOperatorInput>;
-  node_locale?: Maybe<StringQueryOperatorInput>;
-  localFile?: Maybe<FileFilterInput>;
-  fixed?: Maybe<ContentfulFixedFilterInput>;
-  resolutions?: Maybe<ContentfulResolutionsFilterInput>;
-  fluid?: Maybe<ContentfulFluidFilterInput>;
-  sizes?: Maybe<ContentfulSizesFilterInput>;
-  resize?: Maybe<ContentfulResizeFilterInput>;
-};
-
-export type QueryAllContentfulAssetArgs = {
-  filter?: Maybe<ContentfulAssetFilterInput>;
-  sort?: Maybe<ContentfulAssetSortInput>;
-  skip?: Maybe<Scalars["Int"]>;
-  limit?: Maybe<Scalars["Int"]>;
-};
-
 export type QueryContentfulPlaceTagArgs = {
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -4078,8 +4053,6 @@ export type QueryContentfulPlaceArgs = {
   tel?: Maybe<StringQueryOperatorInput>;
   closed_on?: Maybe<StringQueryOperatorInput>;
   business_hours?: Maybe<StringQueryOperatorInput>;
-  website?: Maybe<StringQueryOperatorInput>;
-  twitter?: Maybe<StringQueryOperatorInput>;
   facebook?: Maybe<StringQueryOperatorInput>;
   pictures?: Maybe<ContentfulAssetFilterListInput>;
   menu?: Maybe<ContentfulAssetFilterListInput>;
@@ -4092,6 +4065,8 @@ export type QueryContentfulPlaceArgs = {
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulPlaceSysFilterInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
+  website?: Maybe<StringQueryOperatorInput>;
+  twitter?: Maybe<StringQueryOperatorInput>;
   childContentfulPlaceDescriptionTextNode?: Maybe<
     ContentfulPlaceDescriptionTextNodeFilterInput
   >;
@@ -4103,6 +4078,31 @@ export type QueryContentfulPlaceArgs = {
 export type QueryAllContentfulPlaceArgs = {
   filter?: Maybe<ContentfulPlaceFilterInput>;
   sort?: Maybe<ContentfulPlaceSortInput>;
+  skip?: Maybe<Scalars["Int"]>;
+  limit?: Maybe<Scalars["Int"]>;
+};
+
+export type QueryContentfulAssetArgs = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+  file?: Maybe<ContentfulAssetFileFilterInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  description?: Maybe<StringQueryOperatorInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+  localFile?: Maybe<FileFilterInput>;
+  fixed?: Maybe<ContentfulFixedFilterInput>;
+  resolutions?: Maybe<ContentfulResolutionsFilterInput>;
+  fluid?: Maybe<ContentfulFluidFilterInput>;
+  sizes?: Maybe<ContentfulSizesFilterInput>;
+  resize?: Maybe<ContentfulResizeFilterInput>;
+};
+
+export type QueryAllContentfulAssetArgs = {
+  filter?: Maybe<ContentfulAssetFilterInput>;
+  sort?: Maybe<ContentfulAssetSortInput>;
   skip?: Maybe<Scalars["Int"]>;
   limit?: Maybe<Scalars["Int"]>;
 };
