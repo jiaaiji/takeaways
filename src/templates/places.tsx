@@ -375,7 +375,7 @@ const Places: React.FC<{ data: PlacesQuery }> = ({ data }) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://forms.gle/EkyR4ykrKfswHuFZ6"
+            href="https://forms.gle/T1ccqo19Fvdnwwsz8"
           >
             掲載情報の訂正リクエスト
           </a>
