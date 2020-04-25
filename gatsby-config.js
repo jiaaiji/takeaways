@@ -2,9 +2,9 @@ module.exports = {
   siteMetadata: {
     name: `お持ち帰りごはん 旭川版`,
     siteUrl: process.env.URL || "",
-    title: `プロの味をご家庭で 家事の効率化に、気分転換に、プチ贅沢に`,
+    title: `旭川の飲食店をみんなで応援しよう！`,
     description: `旭川地方のテイクアウトサービスを実施しているお店を掲載しております`,
-    keywords: [`旭川`, `ごはん`, `グルメ`, `テイクアウト`, `持ち帰り`]
+    keywords: [`旭川`, `ごはん`, `グルメ`, `テイクアウト`, `持ち帰り`, `宅配`]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -41,7 +41,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `お持ち帰りごはん 釧路版`,
+        name: `お持ち帰りごはん 旭川版`,
         short_name: `お持ち帰りごはん`,
         lang: `ja`,
         start_url: `/`,

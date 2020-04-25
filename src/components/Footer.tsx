@@ -6,6 +6,7 @@ import {
   faFacebook
 } from "@fortawesome/free-brands-svg-icons";
 import { css } from "@emotion/core";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 export default () => (
   <div
@@ -17,56 +18,72 @@ export default () => (
       text-align: center;
     `}
   >
-    <div>
-      <p
-        css={css`
-          font-weight: bold;
-        `}
-      >
-        旭川ひとまちコミュニティ（一般社団法人登記準備中）
-      </p>
-      <div
-        css={css`
-          a {
-            margin-bottom: 2rem;
-            margin-left: 1rem;
-
-            &:first-of-type {
-              margin-left: 0;
-            }
+    <p
+      css={css`
+        font-weight: bold;
+      `}
+    >
+      一般社団法人旭川ひとまちコミュニティ
+    </p>
+    <div
+      css={css`
+        a {
+          margin-bottom: 2rem;
+          margin-left: 1rem;
+          &:first-of-type {
+            margin-left: 0;
           }
-        `}
+        }
+      `}
+    >
+      <a href="https://ahmc.jp" target="_blank" rel="noopener noreferrer">
+        <FontAwesomeIcon icon={faLink} size="lg" />
+      </a>
+      <a
+        href="https://www.facebook.com/AsahikawaHitoMachiCommunity/"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <a
-          href="https://github.com/jiaaiji"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FontAwesomeIcon icon={faGithub} size="lg" />
-        </a>
-        <a
-          href="https://www.facebook.com/AsahikawaHitoMachiCommunity/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FontAwesomeIcon icon={faFacebook} size="lg" />
-        </a>
-        <p
-          css={css`
-            margin: 0.5rem 0;
-          `}
-        >
-          &bull;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;&nbsp;&bull;
-        </p>
-      </div>
-      <p>合同会社 下村総合投資事務所</p>
-      <p
-        css={css`
-          margin: 0.5rem 0;
-        `}
+        <FontAwesomeIcon icon={faFacebook} size="lg" />
+      </a>
+    </div>
+    <div
+      css={css`
+        font-weight: bold;
+        margin: 0 auto;
+        max-width: 960;
+        padding: 1.45rem 1.0875rem 0.5rem;
+      `}
+    >
+      合同会社下村総合投資事務所
+    </div>
+    <div
+      css={css`
+        a {
+          margin-bottom: 2rem;
+          margin-left: 1rem;
+          &:first-of-type {
+            margin-left: 0;
+          }
+        }
+      `}
+    >
+      <a
+        href="https://github.com/jiaaiji"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        &bull;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;&nbsp;&bull;
-      </p>
+        <FontAwesomeIcon icon={faGithub} size="lg" />
+      </a>
+    </div>
+    <div
+      css={css`
+        font-weight: bold;
+        margin: 0 auto;
+        max-width: 960;
+        padding: 1.45rem 1.0875rem 0.5rem;
+      `}
+    >
       お持ち帰りごはん by 釧路OSSコミュニティ
     </div>
     <div
@@ -74,7 +91,6 @@ export default () => (
         a {
           margin-bottom: 2rem;
           margin-left: 1rem;
-
           &:first-of-type {
             margin-left: 0;
           }

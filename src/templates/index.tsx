@@ -6,7 +6,12 @@ import { TwitterHashtagButton } from "react-twitter-embed";
 import SEO from "../components/SEO";
 import Layout from "../components/Layout";
 import PlaceListItem from "../components/PlaceListItem";
-import { FacebookShareButton } from "react-share";
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  EmailShareButton
+} from "react-share";
+import { FacebookIcon, TwitterIcon, EmailIcon } from "react-share";
 
 const borderdTitle = css`
   font-size: 0.8rem;
@@ -89,6 +94,13 @@ const Index: React.FC<{ data: IndexQuery; pageContext: SitePageContext }> = ({
           }
         `}
       >
+        <h1 css={borderdTitle}>News</h1>
+        <p>5月13日までの特例措置でタクシーによる宅配が可能となりました。</p>
+        <p>
+          掲載を希望される事業者は{" "}
+          <a href="https://ahmc.jp/taxi-form/">掲載を希望される事業者様</a>{" "}
+          より申し込んでください。
+        </p>
         <h1 css={borderdTitle}>About</h1>
         <p>旭川地方でテイクアウトを行っているお店を紹介しています。</p>
         <p>
@@ -101,12 +113,21 @@ const Index: React.FC<{ data: IndexQuery; pageContext: SitePageContext }> = ({
         <div
           css={css`
             text-align: center;
+            letter-spacing: 5px;
           `}
         >
-          <TwitterHashtagButton
-            tag="旭川お持ち帰りごはん"
-            options={{ size: "large" }}
-          />
+          <EmailShareButton url={"https://takeaways.ahmc.jp"}>
+            <EmailIcon size={32} round />
+          </EmailShareButton>{" "}
+          <TwitterShareButton url={"https://takeaways.ahmc.jp"}>
+            <TwitterIcon size={32} round />
+          </TwitterShareButton>{" "}
+          <FacebookShareButton
+            url={"https://takeaways.ahmc.jp"}
+            hashtag={"#旭川お持ち帰りごはん"}
+          >
+            <FacebookIcon size={32} round />
+          </FacebookShareButton>
         </div>
       </article>
 
