@@ -98,7 +98,7 @@ const Index: React.FC<{ data: IndexQuery; pageContext: SitePageContext }> = ({
         <p>5月13日までの特例措置でタクシーによる宅配が可能となりました。</p>
         <p>
           掲載を希望される事業者は{" "}
-          <a href="https://ahmc.jp/taxi-form/">掲載を希望される事業者様</a>{" "}
+          <a href="https://ahmc.jp/taxi-form/">掲載を希望される配送事業者様</a>{" "}
           より申し込んでください。
         </p>
         <h1 css={borderdTitle}>About</h1>
