@@ -109,6 +109,12 @@ const Index: React.FC<{ data: IndexQuery; pageContext: SitePageContext }> = ({
             #旭川お持ち帰りごはん
           </a>{" "}
           をつけて投稿してみてください！
+          <p>
+            ※
+            <a href="https://ahmc.jp/our-thoughts/">
+              サイト開設にあたっての私達の想い
+            </a>
+          </p>
         </p>
         <div
           css={css`
