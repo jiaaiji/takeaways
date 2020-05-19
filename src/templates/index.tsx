@@ -95,7 +95,21 @@ const Index: React.FC<{ data: IndexQuery; pageContext: SitePageContext }> = ({
         `}
       >
         <h1 css={borderdTitle}>News</h1>
-        <p>5月13日までの特例措置でタクシーによる宅配が可能となりました。</p>
+        <p>
+          旭川の印染企業３社（近藤染工場, 水野染工場,
+          やまがみスクリーン印刷）による飲食店応援企画が旭川お持ち帰りごはんとコラボします！
+        </p>
+        <p>
+          詳しくは{" "}
+          <a href="https://www.facebook.com/kondosome/posts/3046524032053131">
+            【勝手に応援企画　TAKE OUT のぼり差し上げますin旭川】
+          </a>{" "}
+          をご覧ください。
+        </p>
+        <p>
+          <s>5月13日</s>
+          9月30日までの特例措置でタクシーによる宅配が可能となりました。
+        </p>
         <p>
           掲載を希望される事業者は{" "}
           <a href="https://ahmc.jp/taxi-form/">掲載を希望される配送事業者様</a>{" "}
