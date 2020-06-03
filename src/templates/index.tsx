@@ -96,6 +96,9 @@ const Index: React.FC<{ data: IndexQuery; pageContext: SitePageContext }> = ({
       >
         <h1 css={borderdTitle}>News</h1>
         <p>
+          タクシー宅配事業者については旭川市の助成事業としてスタートするため、一旦掲載を中止いたします。
+        </p>
+        <p>
           旭川の印染企業３社（近藤染工場, 水野染工場,
           やまがみスクリーン印刷）による飲食店応援企画が旭川お持ち帰りごはんとコラボします！
         </p>
@@ -105,15 +108,6 @@ const Index: React.FC<{ data: IndexQuery; pageContext: SitePageContext }> = ({
             【勝手に応援企画　TAKE OUT のぼり差し上げますin旭川】
           </a>{" "}
           をご覧ください。
-        </p>
-        <p>
-          <s>5月13日</s>
-          9月30日までの特例措置でタクシーによる宅配が可能となりました。
-        </p>
-        <p>
-          掲載を希望される事業者は{" "}
-          <a href="https://ahmc.jp/taxi-form/">掲載を希望される配送事業者様</a>{" "}
-          より申し込んでください。
         </p>
         <h1 css={borderdTitle}>About</h1>
         <p>旭川地方でテイクアウトを行っているお店を紹介しています。</p>
